@@ -1,0 +1,35 @@
+@font-face {
+    font-family: 'blacker';
+    src: url('./BlackerPapua.otf');
+}
+
+.nav-bar {
+    width: 100%;
+    background-color: #fc4747;
+    color: #ffffff;
+    padding-top: 10px;
+    padding-bottom: 5px;
+
+    .logo {
+        width: 200px;
+        height: 200px;
+        border-radius: 200px;
+        box-shadow: 0px 2px 4px #888888;
+        background: #efefef url('images/logo_transparent.png') no-repeat center;
+        background-size: contain;
+        margin: 0 auto;
+        cursor: pointer;
+        transition: all 0.5s ease;
+    }
+
+    .logo:hover {
+        box-shadow: 0px 0px 40px #ffffff;
+        background: #ffffff url('images/logo_transparent.png') no-repeat center;
+        background-size: contain;
+        transform: rotate(360deg);
+    }
+
+    .logo-sub {
+        font-family: 'blacker', Arial, Helvetica, sans-serif;
+    }
+}
