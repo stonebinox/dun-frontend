@@ -36,6 +36,11 @@ $red: #E84545;
         width: 50%;
         margin: 0 auto;
         font-size: 15px;
+
+        &.small {
+            font-size: 11px;
+            padding-top: 7px;
+        }
     }
 
     .bold {
@@ -46,7 +51,7 @@ $red: #E84545;
         background-color: $red;
         color: #ffffff;
         font-family: 'vogue', serif;
-        font-size: 40px;
+        font-size: 30px;
         padding-top: 10px;
         border: 0;
         min-width: 100%;
