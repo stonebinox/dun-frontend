@@ -21,7 +21,8 @@ export class RequestForm extends Component {
                 successDisplay: 'none'
             },
             formDisplay: 'block',
-            payDisplay: 'none'
+            payDisplay: 'none',
+            requestId: null
         };
         this.validateFields = this.validateFields.bind(this);
     }
@@ -79,7 +80,8 @@ export class RequestForm extends Component {
                                             message: 'Your request was submitted successfully! Proceed to pay $25 and complete your booking.'
                                         },
                                         formDisplay: 'none',
-                                        payDisplay: 'block'
+                                        payDisplay: 'block',
+                                        requestId: parseInt(response.data[1])
                                     })
                                 }
                             }
