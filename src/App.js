@@ -4,6 +4,7 @@ import './App.scss';
 import { Navbar } from './Navbar.js';
 import { RequestForm } from './RequestForm.js';
 import { About } from './About.js';
+import { Process } from './Process.js';
 import { Footer } from './Footer.js';
 
 class App extends Component {
@@ -24,6 +25,7 @@ class App extends Component {
         <Navbar />
         <RequestForm />
         <About />
+        <Process />
         <Footer />
       </div>
     );

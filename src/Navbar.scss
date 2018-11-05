@@ -5,10 +5,18 @@
 
 .nav-bar {
     width: 100%;
-    background-color: #fc4747;
+    background: #fc4747 url(./images/893507-new-high-quality-background-images-3072x2048.jpg) center;
+    background-size: cover;
     color: #ffffff;
-    padding-top: 10px;
-    padding-bottom: 5px;
+
+    .overlay {
+        background: rgba(0, 0, 0, 0.4);
+        width: 100%;
+        height: 100%;
+        padding-top: 10px;
+        padding-bottom: 5px;
+        box-shadow: inset 0px 0px 40px #000000;
+    }
 
     .logo {
         width: 200px;
