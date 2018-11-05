@@ -181,6 +181,7 @@ export class RequestForm extends Component {
                         <div className="col-sm-4"></div>
                     </div>
                 </div>
+                <hr />
             </div>
         );
     }

@@ -6,9 +6,19 @@ export class Navbar extends Component {
         return (
             <div className="nav-bar">
                 <br/>
-                <div className="logo"></div>
-                <br/>
-                <h3 className="logo-sub text-center">Get it done, here.</h3>
+                <div className="row">
+                    <div className="col-sm-4">
+                        <h1 className="logo-sub text-center faded link" style={{marginTop: "100px"}}>About</h1>
+                    </div>
+                    <div className="col-sm-4">
+                        <div className="logo"></div>
+                        <br/>
+                        <h3 className="logo-sub text-center">Get it done, here.</h3>
+                    </div>
+                    <div className="col-sm-4">
+                        <h1 className="logo-sub text-center faded link" style={{marginTop: "100px"}}>Contact</h1>
+                    </div>
+                </div>
             </div>
         );
     }

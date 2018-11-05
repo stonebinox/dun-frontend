@@ -1,0 +1,41 @@
+.about {
+    width: 100%;
+    margin: 0 auto;
+    background: url(./images/subtle_dark_feathers.png);
+    color: #efefef;
+    padding-top: 20px;
+    padding-bottom: 40px;
+
+    h3 {
+        font-family: 'vogue', serif;
+    }
+
+    .about-icon {
+        background: url(./images/about_logo.png) no-repeat center;
+        background-size: contain;
+        width: 60px;
+        height: 60px;
+        margin: 0 auto;
+    }
+
+    p {
+        font-family: 'roboto-light', Arial, Helvetica, sans-serif;
+        width: 50%;
+        margin: 0 auto;
+        font-size: 15px;
+    }
+
+    blockquote {
+        font-family: 'vogue', serif;
+
+        p {
+            font-family: 'vogue', serif;
+            width: 100%;
+            font-size: 25px;
+        }
+
+        footer {
+            font-size: 20px;
+        }
+    }
+}
