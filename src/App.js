@@ -5,6 +5,7 @@ import { Navbar } from './Navbar.js';
 import { RequestForm } from './RequestForm.js';
 import { About } from './About.js';
 import { Process } from './Process.js';
+import { Contact } from './Contact.js';
 import { Footer } from './Footer.js';
 
 class App extends Component {
@@ -26,6 +27,7 @@ class App extends Component {
         <RequestForm />
         <About />
         <Process />
+        <Contact />
         <Footer />
       </div>
     );

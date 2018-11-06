@@ -45,6 +45,7 @@ export class Process extends Component {
                             <strong>Lastly,</strong> once we've finished building the MVP, we ask you to take one good look at how things are. When you're satisfied, we give you the entire code along with instructions on how to set it up!
                         </div>
                     </div>
+                    <hr/>
                 </div>
             </div>
         );
