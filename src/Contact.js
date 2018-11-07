@@ -17,7 +17,6 @@ export class Contact extends Component {
     }
 
     sendMessage() {
-        console.log("here");
         let email = $.trim($("#contact_email").val());
         if (email.length > 0) {
             this.setState({
@@ -42,11 +41,24 @@ export class Contact extends Component {
                         });
                     },
                     success: function(response) {
-                        that.setState({
-                            errorDisplay: 'none'
-                        });
                         response = JSON.parse(response);
-                        console.log(response);
+                        if (response.data) {
+                            that.setState({
+                                successDisplay: 'block'
+                            });
+                            document.contact.reset();
+                        }
+                        else {
+                            that.setState({
+                                errorDisplay: 'block'
+                            });
+                        }
+                    },
+                    beforeSend: function() {
+                        that.setState({
+                            errorDisplay: 'none',
+                            successDisplay: 'none'
+                        });
                     }
                 })
             }
