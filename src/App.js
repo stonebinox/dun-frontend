@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import $ from 'jquery';
 import './App.scss';
 
 import { Navbar } from './Navbar.js';
@@ -18,6 +19,22 @@ class App extends Component {
         window.location = "http://www.dun.company";
       }
     }
+
+    this.storeVisitor();
+  }
+
+  storeVisitor() {
+    $.ajax({
+      url: 'https://dun-backend.herokuapp.com/api/visitor/addVisitor',
+      method: 'get',
+      error: function(err) {
+        console.log(err);
+      },
+      success: function(response) {
+        response = JSON.parse(response);
+        console.log(response);
+      }
+    });
   }
 
   render() {
