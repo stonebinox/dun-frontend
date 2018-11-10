@@ -31,7 +31,7 @@ class App extends Component {
         console.log(err);
       },
       success: function(response) {
-        response = JSON.parse(response);
+        // response = JSON.parse(response);
         console.log(response);
       }
     });
