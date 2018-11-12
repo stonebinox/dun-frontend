@@ -29,10 +29,6 @@ class App extends Component {
       method: 'get',
       error: function(err) {
         console.log(err);
-      },
-      success: function(response) {
-        // response = JSON.parse(response);
-        console.log(response);
       }
     });
   }

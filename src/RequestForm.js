@@ -22,9 +22,11 @@ export class RequestForm extends Component {
             },
             formDisplay: 'block',
             payDisplay: 'none',
-            requestId: null
+            requestId: null,
+            currentRequestCount: 0
         };
         this.validateFields = this.validateFields.bind(this);
+        this.countAllRequests();
     }
 
     validateEmail(email) {
@@ -114,6 +116,27 @@ export class RequestForm extends Component {
 
     }
 
+    countAllRequests() {
+        let that = this;
+        $.ajax({
+            url: "https://dun-backend.herokuapp.com/api/request/countAllRequests",
+            method: "get",
+            data: {
+                status_id: 1
+            },
+            error: function(err) {
+                console.log(err);
+            },
+            success: function(response) {
+                response = JSON.parse(response);
+                response = response.data;
+                that.setState({
+                    currentRequestCount: response
+                });
+            }
+        });
+    }
+
     render() {
         return (
             <div className="request-form-holder">
@@ -125,7 +148,13 @@ export class RequestForm extends Component {
                     <h3 className="text-center">Post An MVP</h3>
                     <hr/>
                     <p className="text-center">Have an idea that you want to see come to life? We build MVPs once a week and your idea could be up and running in a week!</p>
-                    <br/>
+                    <hr className="dark"/>
+                    <p className="text-center text-info small">Current Requests</p>
+                    <div className="circle">
+                        <br/>
+                        <h3 className="text-center text-primary">{this.state.currentRequestCount}</h3>
+                    </div>
+                    <hr className="dark"/>
                     <p className="text-center text-red" style={{display: this.state.formDisplay}}><strong>Fill out the form below and let's get started!</strong></p>
                     <hr/>
                     <div className="row">
